@@ -1,0 +1,35 @@
+{
+    "version": "0.1.0",
+    "description": "Headless 3D and VFX engine for agents. Source-available, not open source.",
+    "homepage": "https://voyager.so/vork",
+    "license": {
+        "identifier": "LicenseRef-vork-Preview-License",
+        "url": "https://github.com/voyager-so/vork/blob/main/LICENSE"
+    },
+    "notes": [
+        "Before your first render, prepare shaders for this GPU. It can take a few minutes:",
+        "  vork setup",
+        "vork on Windows needs a recent NVIDIA GPU with its hardware-ray-tracing Vulkan driver, and ffmpeg.",
+        "vork is source-available under the vork Preview License, not open source."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/voyager-so/vork/releases/download/v0.1.0/vork-0.1.0-windows-x64.zip",
+            "hash": "dbc438fb80e17c7cb19256a2a01a1222c654e3f31ae04c38663147444cd353bb"
+        }
+    },
+    "bin": "vork.exe",
+    "checkver": {
+        "github": "https://github.com/voyager-so/vork"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/voyager-so/vork/releases/download/v$version/vork-$version-windows-x64.zip",
+                "hash": {
+                    "url": "$baseurl/SHA256SUMS"
+                }
+            }
+        }
+    }
+}
